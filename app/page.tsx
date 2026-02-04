@@ -183,17 +183,20 @@ export default function Home() {
               variants={item}
               className="flex items-center gap-4 mt-8"
             >
-              <a
-                href="mailto:moosahameed07@gmail.com"
-                title={EMAIL}
-                className="w-11 h-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:border-white/50 hover:text-white transition-colors cursor-pointer inline-flex"
-                aria-label="Email"
+              <motion.a
+                href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(EMAIL)}`}
+                target="_blank"
                 rel="noopener noreferrer"
+                title={`Email me (opens Gmail)`}
+                className="w-11 h-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:border-white/50 hover:text-white transition-colors"
+                aria-label="Email (Gmail)"
+                whileHover={{ scale: 1.14, y: -3 }}
+                whileTap={{ scale: 0.92 }}
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                 </svg>
-              </a>
+              </motion.a>
               <motion.a
                 href={GITHUB_BASE}
                 target="_blank"
