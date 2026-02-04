@@ -325,9 +325,9 @@ export default function Home() {
                     className="text-white/85 text-lg leading-relaxed"
                   >
                     I study Computer Science at the University of Guelph (Class of 2030),
-                    with a focus on cloud infrastructure and cybersecurity. Right now I&apos;m
-                    building in public—shipping client work through Oraxis and grinding toward
-                    my AWS Cloud Practitioner cert.
+                    mostly focused on cloud and cybersecurity. 
+                    Right now I’m building in public, working on client projects with Oraxis 
+                    and prepping for my AWS Cloud Practitioner cert.
                   </motion.p>
                 </div>
 
