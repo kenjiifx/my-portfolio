@@ -16,7 +16,20 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: "Moosa Alam",
-  description: "Computer Science student and aspiring cloud engineer.",
+  description: "Computer Science student at University of Guelph. Cloud, security & DevSecOps. Open to work.",
+  metadataBase: process.env.NEXT_PUBLIC_SITE_URL ? new URL(process.env.NEXT_PUBLIC_SITE_URL) : undefined,
+  openGraph: {
+    title: "Moosa Alam — CS · Cloud & Security",
+    description: "Computer Science student at University of Guelph. Cloud, security & DevSecOps.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Moosa Alam",
+    description: "Computer Science student. Cloud & Security. Open to work.",
+  },
+  themeColor: "#0a0a0a",
+  robots: "index, follow",
 };
 
 export default function RootLayout({

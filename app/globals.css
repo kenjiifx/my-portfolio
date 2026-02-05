@@ -129,13 +129,18 @@ body {
   box-shadow: none !important;
 }
 
-/* Float for PFP - more noticeable */
+/* Float for PFP - more noticeable (disabled when user prefers reduced motion) */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-12px); }
 }
 .animate-float {
   animation: float 3.5s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-float {
+    animation: none;
+  }
 }
 
 /* Glow pulse for PFP */
@@ -145,6 +150,12 @@ body {
 }
 .animate-glow-pulse {
   animation: glow-pulse 2.5s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-glow-pulse {
+    animation: none;
+    box-shadow: 0 0 24px rgba(255,255,255,0.08);
+  }
 }
 
 /* Card hover shine */
@@ -198,6 +209,12 @@ body {
 }
 .animate-marquee-right {
   animation: marquee-right 25s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee-left,
+  .animate-marquee-right {
+    animation: none;
+  }
 }
 
 /* Subtle bounce for interactive elements */

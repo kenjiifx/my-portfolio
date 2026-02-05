@@ -132,7 +132,14 @@ export default function Home() {
   }, [active]);
 
   return (
-    <main className="min-h-screen dot-grid relative overflow-x-hidden">
+    <>
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-white focus:text-[#0a0a0a] focus:rounded-lg focus:font-medium focus:outline-none focus:ring-2 focus:ring-white/50"
+      >
+        Skip to content
+      </a>
+    <main id="main-content" className="min-h-screen dot-grid relative overflow-x-hidden">
       {/* Cursor-follow spotlight - stronger for more "wow" */}
       <div
         className="pointer-events-none fixed inset-0 z-0"
@@ -280,6 +287,7 @@ export default function Home() {
               <motion.button
                 key={tab}
                 onClick={() => setActive(tab)}
+                aria-current={active === tab ? "true" : undefined}
                 className={`relative capitalize text-sm font-medium tracking-wide pb-3 transition-colors ${
                   active === tab ? "text-white" : "text-white/50 hover:text-white/90"
                 }`}
@@ -584,44 +592,64 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.5 }}
-          className="mt-14 flex flex-col items-center"
+          className="mt-14 flex flex-col items-center gap-3"
         >
-          <motion.a
-            href="/resume"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Open resume preview (view, then print or download if you want)"
-            className="group card-shine relative inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-white/30 text-white font-medium text-sm hover:bg-white hover:text-[#0a0a0a] hover:border-white hover:shadow-[0_0_24px_rgba(255,255,255,0.2)] transition-all duration-300"
-            whileHover={{ scale: 1.06 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            View resume
-            <svg
-              className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+          <div className="flex flex-wrap justify-center items-center gap-3">
+            <motion.a
+              href="/resume"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Open resume preview"
+              className="group card-shine relative inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-white/30 text-white font-medium text-sm hover:bg-white hover:text-[#0a0a0a] hover:border-white hover:shadow-[0_0_24px_rgba(255,255,255,0.2)] transition-all duration-300"
+              whileHover={{ scale: 1.06 }}
+              whileTap={{ scale: 0.98 }}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-              />
-            </svg>
-          </motion.a>
+              View resume
+              <svg
+                className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                />
+              </svg>
+            </motion.a>
+            <motion.a
+              href="/Moosa_Alam_Resume_2026.pdf"
+              download
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-white/20 text-white/80 font-medium text-sm hover:bg-white/10 hover:text-white hover:border-white/30 transition-all duration-300"
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              Download PDF
+            </motion.a>
+          </div>
         </motion.div>
 
         <motion.footer
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7 }}
-          className="mt-16 text-center text-white/30 text-xs tracking-wide space-y-1"
+          className="mt-16 text-center text-white/30 text-xs tracking-wide space-y-2"
         >
           <p>Last updated February 2026</p>
+          <p>
+            <a href={`mailto:${EMAIL}`} className="text-white/50 hover:text-white/80 underline decoration-white/30 hover:decoration-white/50 transition-colors">Get in touch</a>
+            {" · "}
+            <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white/80 underline decoration-white/30 hover:decoration-white/50 transition-colors">LinkedIn</a>
+          </p>
           <p className="text-white/20">← → or 1–4 to switch sections</p>
         </motion.footer>
       </div>
     </main>
+    </>
   );
 }
