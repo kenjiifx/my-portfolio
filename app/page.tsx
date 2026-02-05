@@ -256,7 +256,7 @@ export default function Home() {
             ref={tilt.ref}
           >
             <motion.div
-              className="relative w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 rounded-2xl overflow-hidden border border-white/15 shadow-2xl shadow-black/50 animate-float animate-glow-pulse"
+              className="relative w-40 h-40 sm:w-52 sm:h-52 md:w-56 md:h-56 rounded-2xl overflow-hidden border border-white/15 shadow-2xl shadow-black/50 animate-float animate-glow-pulse"
               style={{
                 rotateX: tilt.rotateX,
                 rotateY: tilt.rotateY,
@@ -266,8 +266,8 @@ export default function Home() {
               <Image
                 src="/profilee.png"
                 alt="Moosa Alam"
-                width={192}
-                height={192}
+                width={224}
+                height={224}
                 className="object-cover w-full h-full object-[center_65%]"
                 priority
               />
@@ -592,46 +592,32 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.5 }}
-          className="mt-14 flex flex-col items-center gap-3"
+          className="mt-14 flex flex-col items-center"
         >
-          <div className="flex flex-wrap justify-center items-center gap-3">
-            <motion.a
-              href="/resume"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Open resume preview"
-              className="group card-shine relative inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-white/30 text-white font-medium text-sm hover:bg-white hover:text-[#0a0a0a] hover:border-white hover:shadow-[0_0_24px_rgba(255,255,255,0.2)] transition-all duration-300"
-              whileHover={{ scale: 1.06 }}
-              whileTap={{ scale: 0.98 }}
+          <motion.a
+            href="/resume"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Open resume preview"
+            className="group card-shine relative inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-white/30 text-white font-medium text-sm hover:bg-white hover:text-[#0a0a0a] hover:border-white hover:shadow-[0_0_24px_rgba(255,255,255,0.2)] transition-all duration-300"
+            whileHover={{ scale: 1.06 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            View resume
+            <svg
+              className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
             >
-              View resume
-              <svg
-                className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                />
-              </svg>
-            </motion.a>
-            <motion.a
-              href="/Moosa_Alam_Resume_2026.pdf"
-              download
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-white/20 text-white/80 font-medium text-sm hover:bg-white/10 hover:text-white hover:border-white/30 transition-all duration-300"
-              whileHover={{ scale: 1.04 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-              </svg>
-              Download PDF
-            </motion.a>
-          </div>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+              />
+            </svg>
+          </motion.a>
         </motion.div>
 
         <motion.footer
@@ -642,7 +628,7 @@ export default function Home() {
         >
           <p>Last updated February 2026</p>
           <p>
-            <a href={`mailto:${EMAIL}`} className="text-white/50 hover:text-white/80 underline decoration-white/30 hover:decoration-white/50 transition-colors">Get in touch</a>
+            <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(EMAIL)}`} target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white/80 underline decoration-white/30 hover:decoration-white/50 transition-colors">Get in touch</a>
             {" · "}
             <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white/80 underline decoration-white/30 hover:decoration-white/50 transition-colors">LinkedIn</a>
           </p>
