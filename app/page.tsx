@@ -177,7 +177,7 @@ export default function Home() {
               variants={item}
               className="mt-6 text-white/60 text-lg sm:text-xl font-medium"
             >
-              Computer Science @ Guelph · Cloud & security
+              CS Freshman focused on cloud security and DevSecOps
             </motion.p>
             <motion.div
               variants={item}
@@ -324,10 +324,11 @@ export default function Home() {
                     transition={{ delay: 0.1, duration: 0.4 }}
                     className="text-white/85 text-lg leading-relaxed"
                   >
-                    I study Computer Science at the University of Guelph (Class of 2030),
-                    mostly focused on cloud and cybersecurity. 
-                    Right now I’m building in public, working on client projects with Oraxis 
-                    and prepping for my AWS Cloud Practitioner cert.
+                    I’m a Computer Science student at the University of Guelph (Class of 2030) focused on cloud security and DevSecOps.
+
+                    I like learning by building real things, whether that’s client projects through Oraxis or hands-on cloud and security tools. Right now, I’m building in public and studying for my AWS Cloud Practitioner cert.
+
+                    I’m especially interested in how cloud systems work in practice and how to make them more secure.
                   </motion.p>
                 </div>
 
@@ -346,27 +347,27 @@ export default function Home() {
                   className="mt-4 space-y-3"
                 >
                   {[
-                    {
-                      name: "AI Skills Lab",
-                      desc: "Python, Prompting, Evaluation · In Progress. AI skill prompts for 6 admin-style tasks; evaluation harness for clarity, accuracy, tone fit.",
-                      href: "https://github.com/kenjiifx/AI-Skills-Lab",
-                    },
-                    {
-                      name: "Vectorized Quant Backtester",
-                      desc: "Python, NumPy, Pandas · Dec 2025 – Jan 2026. Event-driven backtesting; 40% speed gain via vectorization; Sharpe, drawdown, beta.",
-                      href: "https://github.com/kenjiifx/Vectorized-Quant-Backtester",
-                    },
-                    {
-                      name: "Distributed SSH Threat Monitor",
-                      desc: "AWS EC2, Docker, ELK · Jan 2026. Cloud honeypot for SSH brute-force; 5,000+ logs via Logstash; Kibana dashboard, hardened VPC.",
-                      href: "https://github.com/kenjiifx/Distributed-SSH-Threat-Monitor",
-                    },
-                    {
-                      name: "More on GitHub",
-                      desc: "Scripts, experiments, and side projects. Always tinkering.",
-                      href: GITHUB_BASE,
-                    },
-                  ].map((proj, i) => (
+                      {
+                        name: "AI Skills Lab",
+                        desc: "Python · In progress. Built prompt workflows for admin-style tasks with an evaluation setup for clarity, accuracy, and tone.",
+                        href: "https://github.com/kenjiifx/AI-Skills-Lab",
+                      },
+                      {
+                        name: "Vectorized Quant Backtester",
+                        desc: "Python, NumPy, Pandas · Dec 2025 – Jan 2026. Event-driven backtesting engine with ~40% speed gains using vectorization.",
+                        href: "https://github.com/kenjiifx/Vectorized-Quant-Backtester",
+                      },
+                      {
+                        name: "Distributed SSH Threat Monitor",
+                        desc: "AWS EC2, Docker, ELK · Jan 2026. Cloud-based SSH honeypot capturing 5,000+ brute-force attempts with live dashboards.",
+                        href: "https://github.com/kenjiifx/Distributed-SSH-Threat-Monitor",
+                      },
+                      {
+                        name: "More on GitHub",
+                        desc: "Small tools, experiments, and side projects across systems, cloud, and automation.",
+                        href: GITHUB_BASE,
+                      },
+                    ].map((proj, i) => (
                     <motion.li key={proj.name} variants={item}>
                       <motion.a
                         href={proj.href}
@@ -408,25 +409,25 @@ export default function Home() {
               >
                 <div className="absolute left-[5px] top-2 bottom-2 w-px bg-white/10" />
                 {[
-                  {
-                    role: "Founder",
-                    org: "Oraxis",
-                    period: "Jun 2025 – Present",
-                    desc: "Building and shipping web solutions for clients. End-to-end development and client work.",
-                  },
-                  {
-                    role: "Academic Tutor & Mentor",
-                    org: "Licensed2Learn",
-                    period: "Nov 2024 – Jan 2025",
-                    desc: "Drove 20% improvement in student outcomes through tailored tutoring in Math, CS, and English.",
-                  },
-                  {
-                    role: "Social Media Marketing Intern",
-                    org: "Mind4Youth",
-                    period: "Nov 2024 – Dec 2024",
-                    desc: "Grew Instagram engagement 25% with strategic content and campaign visuals.",
-                  },
-                ].map((job, i) => (
+                    {
+                      role: "Founder",
+                      org: "Oraxis",
+                      period: "Jun 2025 – Present",
+                      desc: "Built and shipped web solutions for clients, handling development, deployment, and ongoing improvements.",
+                    },
+                    {
+                      role: "Academic Tutor & Mentor",
+                      org: "Licensed2Learn",
+                      period: "Nov 2024 – Jan 2025",
+                      desc: "Provided one-on-one tutoring in Math, CS, and English, helping students improve understanding and performance.",
+                    },
+                    {
+                      role: "Social Media Marketing Intern",
+                      org: "Mind4Youth",
+                      period: "Nov 2024 – Dec 2024",
+                      desc: "Helped grow Instagram engagement by 25% through targeted content and campaign visuals.",
+                    },
+                  ].map((job, i) => (
                   <motion.div
                     key={job.org}
                     initial={{ opacity: 0, x: -12 }}
