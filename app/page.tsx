@@ -177,7 +177,7 @@ export default function Home() {
               variants={item}
               className="mt-6 text-white/60 text-lg sm:text-xl font-medium"
             >
-              CS Freshman focused on cloud security and DevSecOps
+              Computer Science @ Guelph · Cloud & Security
             </motion.p>
             <motion.div
               variants={item}
@@ -318,19 +318,18 @@ export default function Home() {
                 className="max-w-2xl"
               >
                 <div className="space-y-4">
-                  <motion.p
+                  <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1, duration: 0.4 }}
-                    className="text-white/85 text-lg leading-relaxed"
+                    className="text-white/85 text-lg leading-relaxed space-y-4" // Added space-y-4 here
                   >
-                    I’m a Computer Science student at the University of Guelph (Class of 2030) focused on cloud security and DevSecOps.
-
-                    I like learning by building real things, whether that’s client projects through Oraxis or hands-on cloud and security tools. Right now, I’m building in public and studying for my AWS Cloud Practitioner cert.
-
-                    I’m especially interested in how cloud systems work in practice and how to make them more secure.
-                  </motion.p>
+                    <p>I’m a Computer Science student at the University of Guelph, focused on cloud security and DevSecOps.</p>
+                    <p>I like learning by building real things, whether that’s client projects through Oraxis or hands-on cloud and security tools. Right now, I’m building in public and studying for my AWS Cloud Practitioner cert.</p>
+                    <p>I’m especially interested in how cloud systems work in practice and how to make them more secure.</p>
+                  </motion.div>
                 </div>
+
 
                 <motion.p
                   initial={{ opacity: 0, x: -8 }}
