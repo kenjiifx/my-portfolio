@@ -257,7 +257,7 @@ export default function Home() {
               }}
             >
               <Image
-                src="/profilee.jpg"
+                src="/profilee.png"
                 alt="Moosa Alam"
                 width={192}
                 height={192}
