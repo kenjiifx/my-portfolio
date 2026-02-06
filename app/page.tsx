@@ -332,9 +332,9 @@ export default function Home() {
                     transition={{ delay: 0.1, duration: 0.4 }}
                     className="text-white/85 text-lg leading-relaxed space-y-4" // Added space-y-4 here
                   >
-                    <p>I’m a Computer Science student at the University of Guelph, focused on cloud security and DevSecOps.</p>
-                    <p>I like learning by building real things, whether that’s client projects through Oraxis or hands-on cloud and security tools. Right now, I’m building in public and studying for my AWS Cloud Practitioner cert.</p>
-                    <p>I’m especially interested in how cloud systems work in practice and how to make them more secure.</p>
+                    <p>I’m a Computer Science student at the University of Guelph, interested in cloud systems, security, and how software runs in the real world.</p>
+                    <p>I mostly learn by building things, from client work through Oraxis to messing around with cloud and backend systems. Lately I’ve been getting more into cloud infrastructure and studying for the AWS Cloud Practitioner cert.</p>
+                    <p>I’m interested in how systems actually work once they’re live, and how to make them more secure.</p>
                   </motion.div>
                 </div>
 
