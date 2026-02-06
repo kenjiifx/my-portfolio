@@ -417,6 +417,12 @@ export default function Home() {
                 <div className="absolute left-[5px] top-2 bottom-2 w-px bg-white/10" />
                 {[
                     {
+                      role: "Software Engineer Intern",
+                      org: "Vibez Music",
+                      period: "Jan 2026 – Present",
+                      desc: "Developing iOS applications using Swift, building features and improving user experience for music-related products.",
+                    },
+                    {
                       role: "Founder",
                       org: "Oraxis",
                       period: "Jun 2025 – Present",
