@@ -354,11 +354,11 @@ export default function Home() {
                   className="mt-4 space-y-3"
                 >
                   {[
-                      {
-                        name: "AI Skills Lab",
-                        desc: "Python · In progress. Built prompt workflows for admin-style tasks with an evaluation setup for clarity, accuracy, and tone.",
-                        href: "https://github.com/kenjiifx/AI-Skills-Lab",
-                      },
+                      // {
+                      //   name: "AI Skills Lab",
+                      //   desc: "Python · In progress. Built prompt workflows for admin-style tasks with an evaluation setup for clarity, accuracy, and tone.",
+                      //   href: "https://github.com/kenjiifx/AI-Skills-Lab",
+                      // },
                       {
                         name: "Vectorized Quant Backtester",
                         desc: "Python, NumPy, Pandas · Dec 2025 – Jan 2026. Event-driven backtesting engine with ~40% speed gains using vectorization.",
