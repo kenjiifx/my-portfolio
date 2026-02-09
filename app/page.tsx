@@ -354,20 +354,20 @@ export default function Home() {
                   className="mt-4 space-y-3"
                 >
                   {[
-                      // {
-                      //   name: "AI Skills Lab",
-                      //   desc: "Python · In progress. Built prompt workflows for admin-style tasks with an evaluation setup for clarity, accuracy, and tone.",
-                      //   href: "https://github.com/kenjiifx/AI-Skills-Lab",
-                      // },
                       {
-                        name: "Vectorized Quant Backtester",
-                        desc: "Python, NumPy, Pandas · Dec 2025 – Jan 2026. Event-driven backtesting engine with ~40% speed gains using vectorization.",
-                        href: "https://github.com/kenjiifx/Vectorized-Quant-Backtester",
+                        name: "ApexSim: Event-Driven Trading Backtester",
+                        desc: "Python, NumPy, pandas · Jan–Feb 2026. Event-driven backtester with limit order book, execution assumptions, and portfolio accounting; sub-2 ms median latency in benchmarks and automated research reports.",
+                        href: "https://github.com/kenjiifx/ApexSim",
                       },
                       {
-                        name: "Distributed SSH Threat Monitor",
-                        desc: "AWS EC2, Docker, ELK · Jan 2026. Cloud-based SSH honeypot capturing 5,000+ brute-force attempts with live dashboards.",
-                        href: "https://github.com/kenjiifx/Distributed-SSH-Threat-Monitor",
+                        name: "QuoterLab: Market Making + Inventory Risk",
+                        desc: "Python, NumPy · Dec 2025 – Jan 2026. Two-sided quoting strategy with inventory skew, position limits, and kill-switch; Monte Carlo across 100+ scenarios and parameter selection by drawdown/exposure.",
+                        href: "https://github.com/kenjiifx/QuoterLab",
+                      },
+                      {
+                        name: "TickVault: Market Data Ingest + Deterministic Replay",
+                        desc: "Python, WebSockets, PostgreSQL · Jan 2026. Streaming ingestion from a crypto exchange WebSocket into normalized ticks in PostgreSQL; 10k+ updates/min with batched writes and indexed hot fields.",
+                        href: "https://github.com/kenjiifx/TickVault",
                       },
                       {
                         name: "More on GitHub",
