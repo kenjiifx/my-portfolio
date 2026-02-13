@@ -268,7 +268,7 @@ export default function Home() {
                 alt="Moosa Alam"
                 width={224}
                 height={224}
-                className="object-cover w-full h-full object-[center_65%]"
+                className="object-cover w-full h-full object-[center_40%]"
                 priority
               />
             </motion.div>
