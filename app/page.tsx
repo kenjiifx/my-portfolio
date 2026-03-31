@@ -184,7 +184,7 @@ export default function Home() {
               variants={item}
               className="mt-6 text-white/60 text-lg sm:text-xl font-medium"
             >
-              Computer Science @ Guelph · Cloud & Security
+              Computer Science @ Guelph · Aspiring Security Engineer
             </motion.p>
             <motion.div
               variants={item}
@@ -330,11 +330,12 @@ export default function Home() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1, duration: 0.4 }}
-                    className="text-white/85 text-lg leading-relaxed space-y-4" // Added space-y-4 here
+                    className="text-white/85 text-lg leading-relaxed space-y-4"
                   >
-                    <p>I’m a Computer Science student at the University of Guelph, interested in cloud systems, security, and how software runs in the real world.</p>
-                    <p>I mostly learn by building things, from client work through Oraxis to messing around with cloud and backend systems. Lately I’ve been getting more into cloud infrastructure and studying for the AWS Cloud Practitioner cert.</p>
-                    <p>I’m interested in how systems actually work once they’re live, and how to make them more secure.</p>
+                    <p>I’m a Computer Science student at the University of Guelph with a clear goal: become a Security Engineer who builds systems that are secure by default.</p>
+                    <p>I learn fastest by shipping, from client work through Oraxis to backend and cloud projects where I can test ideas in real environments.</p>
+                    <p>Right now I am focused on application security, detection tooling, and cloud security fundamentals while working toward Security+, AZ-500, and AWS Cloud Practitioner.</p>
+                    <p>I am currently seeking security-focused internships and co-op opportunities where I can contribute to real-world security engineering work.</p>
                   </motion.div>
                 </div>
 
@@ -355,19 +356,19 @@ export default function Home() {
                 >
                   {[
                       {
-                        name: "ApexSim: Event-Driven Trading Backtester",
-                        desc: "Python, NumPy, pandas · Jan–Feb 2026. Event-driven backtester with limit order book, execution assumptions, and portfolio accounting; sub-2 ms median latency in benchmarks and automated research reports.",
-                        href: "https://github.com/kenjiifx/ApexSim",
+                        name: "Log Analyzer Threat Detection Tool",
+                        desc: "Python · Built a threat-detection pipeline that parses auth and system logs, flags suspicious behavior patterns, and improves investigation speed during triage.",
+                        href: "https://github.com/kenjiifx/Log-Analyzer-Threat-Detection-Tool",
                       },
                       {
-                        name: "QuoterLab: Market Making + Inventory Risk",
-                        desc: "Python, NumPy · Dec 2025 – Jan 2026. Two-sided quoting strategy with inventory skew, position limits, and kill-switch; Monte Carlo across 100+ scenarios and parameter selection by drawdown/exposure.",
-                        href: "https://github.com/kenjiifx/QuoterLab",
+                        name: "Dockerized API",
+                        desc: "Python, Docker · Containerized backend API with reproducible local environments and deployment-ready configuration to reduce setup friction and improve consistency.",
+                        href: "https://github.com/kenjiifx/dockerized-api",
                       },
                       {
-                        name: "TickVault: Market Data Ingest + Deterministic Replay",
-                        desc: "Python, WebSockets, PostgreSQL · Jan 2026. Streaming ingestion from a crypto exchange WebSocket into normalized ticks in PostgreSQL; 10k+ updates/min with batched writes and indexed hot fields.",
-                        href: "https://github.com/kenjiifx/TickVault",
+                        name: "Multithreaded HTTP Server",
+                        desc: "C, Systems Programming · Concurrent HTTP server implementation focused on thread-safe request handling, connection management, and low-level networking performance.",
+                        href: "https://github.com/kenjiifx/Multithreaded-HTTP-Server",
                       },
                       {
                         name: "More on GitHub",
@@ -419,8 +420,8 @@ export default function Home() {
                     {
                       role: "Software Engineer Intern",
                       org: "Vibez Music",
-                      period: "Jan 2026 – Present",
-                      desc: "Developing iOS applications using Swift, building features and improving user experience for music-related products.",
+                      period: "Jan 2026 – Apr 2026",
+                      desc: "Built internal tools and backend services that automated manual workflows and improved team throughput by 40%+, while collaborating with iOS engineers to ship features in Swift.",
                     },
                     {
                       role: "Founder",
@@ -515,13 +516,18 @@ export default function Home() {
               >
                 {[
                   {
-                    title: "CS50's Introduction to Programming with Python",
-                    meta: "Harvard University · Completed",
-                    done: true,
+                    title: "CompTIA Security+",
+                    meta: "In progress · Expected 2026",
+                    done: false,
+                  },
+                  {
+                    title: "Azure Security Engineer (AZ-500)",
+                    meta: "In progress · Expected 2026",
+                    done: false,
                   },
                   {
                     title: "AWS Certified Cloud Practitioner",
-                    meta: "In progress · 2026",
+                    meta: "In progress · Expected 2026",
                     done: false,
                   },
                 ].map((cert, i) => (
@@ -632,7 +638,7 @@ export default function Home() {
           transition={{ delay: 0.7 }}
           className="mt-16 text-center text-white/30 text-xs tracking-wide space-y-2"
         >
-          <p>Last updated February 2026</p>
+          <p>Last updated April 2026</p>
           <p>
             <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(EMAIL)}`} target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white/80 underline decoration-white/30 hover:decoration-white/50 transition-colors">Get in touch</a>
             {" · "}
