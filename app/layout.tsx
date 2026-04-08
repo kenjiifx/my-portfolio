@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Outfit } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
@@ -17,20 +17,26 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: "Moosa Alam",
-  description: "Computer Science student at University of Guelph. Cloud, security & DevSecOps. Open to work.",
+  description:
+    "Computer Science @ University of Guelph. Aspiring Security Engineer. Open to security-focused internships and co-op roles.",
   metadataBase: process.env.NEXT_PUBLIC_SITE_URL ? new URL(process.env.NEXT_PUBLIC_SITE_URL) : undefined,
   openGraph: {
-    title: "Moosa Alam — CS · Cloud & Security",
-    description: "Computer Science student at University of Guelph. Cloud, security & DevSecOps.",
+    title: "Moosa Alam — CS · Security Engineering",
+    description:
+      "Computer Science student at University of Guelph. Aspiring Security Engineer focused on secure, reliable systems.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Moosa Alam",
-    description: "Computer Science student. Cloud & Security. Open to work.",
+    description:
+      "Computer Science @ Guelph. Aspiring Security Engineer. Open to security-focused roles.",
   },
-  themeColor: "#0a0a0a",
   robots: "index, follow",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0a0a0a",
 };
 
 export default function RootLayout({

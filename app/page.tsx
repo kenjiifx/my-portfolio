@@ -56,7 +56,7 @@ const TECH_ROW_1 = [
   "AWS", "Git", "Linux", "Tailwind", "Framer Motion", "HTML", "CSS",
 ];
 const TECH_ROW_2 = [
-  "Cloud", "Cybersecurity", "REST APIs", "CI/CD", "Vercel", "PostgreSQL",
+  "AppSec", "Cybersecurity", "REST APIs", "CI/CD", "Vercel", "PostgreSQL",
   "MongoDB", "Docker", "Figma", "VS Code",
 ];
 

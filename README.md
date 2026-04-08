@@ -1,50 +1,34 @@
-# Moosa Alam - Portfolio
+# Moosa Alam — Portfolio
 
-A modern, interactive portfolio website built with cutting-edge technologies.
+Personal site built with Next.js (App Router), deployed on Vercel.
 
-## 🚀 Tech Stack
+## Tech stack
 
-- **Next.js 15** - React framework with App Router
-- **TypeScript** - Type-safe code
-- **Tailwind CSS** - Utility-first styling
-- **Framer Motion** - Smooth animations
-- **Three.js / React Three Fiber** - 3D graphics
-- **Canvas API** - Particle effects
+- **Next.js 15** — App Router, static export
+- **TypeScript**
+- **Tailwind CSS**
+- **Framer Motion** — section transitions and micro-interactions
+- **@vercel/analytics** — Web Analytics on the live deployment
 
-## ✨ Features
-
-- 🎨 **Modern Design** - Minimalistic yet creative UI
-- 🌊 **Smooth Animations** - Powered by Framer Motion
-- 🎭 **Interactive Elements** - Hover effects, particles, custom cursor
-- 📱 **Fully Responsive** - Works on all devices
-- ⚡ **Optimized Performance** - Fast loading and smooth scrolling
-- 🎯 **Glass Morphism** - Modern glassmorphism effects
-- 🌈 **Gradient Accents** - Beautiful color schemes
-
-## 🛠️ Development
+## Development
 
 ```bash
-# Install dependencies
 npm install
-
-# Run development server
 npm run dev
-
-# Build for production
-npm run build
-
-# Start production server
-npm start
 ```
 
-## 🚀 Deployment
+```bash
+npm run build
+```
 
-This portfolio is optimized for Vercel deployment:
+Static export is configured in `next.config.ts` (`output: "export"`).
 
-1. Push your code to GitHub
-2. Import the repository to Vercel
-3. Deploy with one click!
+## Deployment
 
-## 📄 License
+Connected to GitHub; pushes to `main` deploy via Vercel.
+
+Optional: set `NEXT_PUBLIC_SITE_URL` (e.g. `https://moosaalam.vercel.app`) for canonical / Open Graph base URLs.
+
+## License
 
 © 2026 Moosa Alam. All rights reserved.
