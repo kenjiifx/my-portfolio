@@ -56,7 +56,7 @@ const TECH_ROW_1 = [
   "AWS", "Git", "Linux", "Tailwind", "Framer Motion", "HTML", "CSS",
 ];
 const TECH_ROW_2 = [
-  "AppSec", "Cybersecurity", "REST APIs", "CI/CD", "Vercel", "PostgreSQL",
+  "Terraform", "Cybersecurity", "REST APIs", "CI/CD", "Vercel", "PostgreSQL",
   "MongoDB", "Docker", "Figma", "VS Code",
 ];
 
@@ -333,8 +333,8 @@ export default function Home() {
                     className="text-white/85 text-lg leading-relaxed space-y-4"
                   >
                     <p>I’m a Computer Science student at the University of Guelph with a clear goal: become a Security Engineer who builds systems that are secure by default.</p>
-                    <p>I learn fastest by shipping, from client work through Oraxis to backend and cloud projects where I can test ideas in real environments.</p>
-                    <p>Right now I am focused on application security, detection tooling, and cloud security fundamentals while working toward Security+, AZ-500, and AWS Cloud Practitioner.</p>
+                    <p>I learn fastest by shipping, from freelance client work to backend, infrastructure, and security projects where I can test ideas in real environments.</p>
+                    <p>Right now I am focused on observability, threat detection, and secure cloud fundamentals while working toward AWS Cloud Practitioner.</p>
                     <p>I am currently seeking security-focused internships and co-op opportunities where I can contribute to real-world security engineering work.</p>
                   </motion.div>
                 </div>
@@ -356,19 +356,19 @@ export default function Home() {
                 >
                   {[
                       {
-                        name: "Log Analyzer Threat Detection Tool",
-                        desc: "Python · Built a threat-detection pipeline that parses auth and system logs, flags suspicious behavior patterns, and improves investigation speed during triage.",
+                        name: "Threat Detection Pipeline",
+                        desc: "Python, PostgreSQL, Prometheus, Grafana · Feb 2026 – Present. Real-time log ingestion and anomaly detection with alerts, plus dashboards for system health and attack patterns.",
                         href: "https://github.com/kenjiifx/Log-Analyzer-Threat-Detection-Tool",
                       },
                       {
-                        name: "Dockerized API",
-                        desc: "Python, Docker · Containerized backend API with reproducible local environments and deployment-ready configuration to reduce setup friction and improve consistency.",
-                        href: "https://github.com/kenjiifx/dockerized-api",
+                        name: "Multithreaded HTTP Server",
+                        desc: "C, Sockets, Pthreads · Jan 2026. Concurrent HTTP/1.1 server with a thread pool; validated with Valgrind and stress tests under parallel load.",
+                        href: "https://github.com/kenjiifx/Multithreaded-HTTP-Server",
                       },
                       {
-                        name: "Multithreaded HTTP Server",
-                        desc: "C, Systems Programming · Concurrent HTTP server implementation focused on thread-safe request handling, connection management, and low-level networking performance.",
-                        href: "https://github.com/kenjiifx/Multithreaded-HTTP-Server",
+                        name: "SSH Honeypot & Threat Analytics",
+                        desc: "AWS, Docker, ELK, Python, Terraform · Dec 2025 – Jan 2026. Cloud honeypot capturing real attack traffic; 5,000+ events analyzed with least-privilege IAM and secure provisioning.",
+                        href: "https://github.com/kenjiifx/Distributed-SSH-Threat-Monitor",
                       },
                       {
                         name: "More on GitHub",
@@ -418,16 +418,16 @@ export default function Home() {
                 <div className="absolute left-[5px] top-2 bottom-2 w-px bg-white/10" />
                 {[
                     {
-                      role: "Software Engineer Intern",
+                      role: "Software Engineering Intern",
                       org: "Vibez Music",
-                      period: "Jan 2026 – Apr 2026",
-                      desc: "Built internal tools and backend services that automated manual workflows and improved team throughput by 40%+, while collaborating with iOS engineers to ship features in Swift.",
+                      period: "Jan 2026 – Apr 2026 · Toronto, ON",
+                      desc: "Improved internal throughput by 40%+ with Python backend services and automation; tightened observability with validation, structured logging, and standardized errors; owned CI/CD-backed deployments for cross-functional teams.",
                     },
                     {
-                      role: "Founder",
-                      org: "Oraxis",
-                      period: "Jun 2025 – Present",
-                      desc: "Built and shipped web solutions for clients, handling development, deployment, and ongoing improvements.",
+                      role: "Freelance Web Developer",
+                      org: "Self-Employed",
+                      period: "Jun 2024 – Present · Remote",
+                      desc: "Delivered 4+ production-grade web systems end-to-end (design through deployment); tuned performance for 95–100 Lighthouse scores via caching, assets, and efficient loading.",
                     },
                     {
                       role: "Academic Tutor & Mentor",
@@ -516,18 +516,8 @@ export default function Home() {
               >
                 {[
                   {
-                    title: "CompTIA Security+",
-                    meta: "In progress · Expected 2026",
-                    done: false,
-                  },
-                  {
-                    title: "Azure Security Engineer (AZ-500)",
-                    meta: "In progress · Expected 2026",
-                    done: false,
-                  },
-                  {
                     title: "AWS Certified Cloud Practitioner",
-                    meta: "In progress · Expected 2026",
+                    meta: "In progress · Amazon Web Services",
                     done: false,
                   },
                 ].map((cert, i) => (
@@ -638,7 +628,7 @@ export default function Home() {
           transition={{ delay: 0.7 }}
           className="mt-16 text-center text-white/30 text-xs tracking-wide space-y-2"
         >
-          <p>Last updated April 2026</p>
+          <p>Last updated May 2026</p>
           <p>
             <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(EMAIL)}`} target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white/80 underline decoration-white/30 hover:decoration-white/50 transition-colors">Get in touch</a>
             {" · "}
