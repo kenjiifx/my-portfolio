@@ -56,7 +56,7 @@ const TECH_ROW_1 = [
   "AWS", "Git", "Linux", "Tailwind", "Framer Motion", "HTML", "CSS",
 ];
 const TECH_ROW_2 = [
-  "Terraform", "Cybersecurity", "REST APIs", "CI/CD", "Vercel", "PostgreSQL",
+  "Terraform", "Cybersecurity", "IAM", "REST APIs", "CI/CD", "Vercel", "PostgreSQL",
   "MongoDB", "Docker", "Figma", "VS Code",
 ];
 
@@ -334,7 +334,7 @@ export default function Home() {
                   >
                     <p>I’m a Computer Science student at the University of Guelph with a clear goal: become a Security Engineer who builds systems that are secure by default.</p>
                     <p>I learn fastest by shipping, from freelance client work to backend, infrastructure, and security projects where I can test ideas in real environments.</p>
-                    <p>Right now I am focused on observability, threat detection, and secure cloud fundamentals while working toward AWS Cloud Practitioner.</p>
+                    <p>Right now I am focused on agent runtime security, cloud IAM hardening, and threat detection while working toward AWS Cloud Practitioner and CCNA.</p>
                     <p>I am currently seeking security-focused internships and co-op opportunities where I can contribute to real-world security engineering work.</p>
                   </motion.div>
                 </div>
@@ -356,23 +356,23 @@ export default function Home() {
                 >
                   {[
                       {
-                        name: "Threat Detection Pipeline",
-                        desc: "Python, PostgreSQL, Prometheus, Grafana · Feb 2026 – Present. Real-time log ingestion and anomaly detection with alerts, plus dashboards for system health and attack patterns.",
-                        href: "https://github.com/kenjiifx/Log-Analyzer-Threat-Detection-Tool",
+                        name: "Agent Seatbelt",
+                        desc: "TypeScript, CLI, policy engine · Runtime firewall for AI coding agents — blocks risky shell, secret, and production actions with approvals, receipts, and audit trails.",
+                        href: "https://github.com/kenjiifx/Agent-Seatbelt",
                       },
                       {
-                        name: "Multithreaded HTTP Server",
-                        desc: "C, Sockets, Pthreads · Jan 2026. Concurrent HTTP/1.1 server with a thread pool; validated with Valgrind and stress tests under parallel load.",
-                        href: "https://github.com/kenjiifx/Multithreaded-HTTP-Server",
+                        name: "Permission Guard",
+                        desc: "TypeScript, AWS IAM, SARIF · Local-first CLI that scans IAM policies for overly broad permissions, scores risk, and suggests safer reviewable remediations.",
+                        href: "https://github.com/kenjiifx/Permission-Guard",
                       },
                       {
                         name: "SSH Honeypot & Threat Analytics",
-                        desc: "AWS, Docker, ELK, Python, Terraform · Dec 2025 – Jan 2026. Cloud honeypot capturing real attack traffic; 5,000+ events analyzed with least-privilege IAM and secure provisioning.",
+                        desc: "AWS, Docker, ELK, Python, Terraform · Cloud honeypot capturing real attack traffic; 5,000+ events analyzed with least-privilege IAM and secure provisioning.",
                         href: "https://github.com/kenjiifx/Distributed-SSH-Threat-Monitor",
                       },
                       {
                         name: "More on GitHub",
-                        desc: "Small tools, experiments, and side projects across systems, cloud, and automation.",
+                        desc: "Security tooling, cloud experiments, and side projects across systems and automation.",
                         href: GITHUB_BASE,
                       },
                     ].map((proj, i) => (
