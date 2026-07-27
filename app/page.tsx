@@ -520,6 +520,11 @@ export default function Home() {
                     meta: "In progress · Amazon Web Services",
                     done: false,
                   },
+                  {
+                    title: "CCNA",
+                    meta: "In progress · Cisco",
+                    done: false,
+                  },
                 ].map((cert, i) => (
                   <motion.div
                     key={cert.title}
