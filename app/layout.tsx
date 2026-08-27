@@ -18,19 +18,19 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Moosa Alam",
   description:
-    "Computer Science @ University of Guelph. Aspiring Security Engineer. Open to security-focused internships and co-op roles.",
+    "Computer Science @ University of Guelph. Aspiring Network Engineer. Open to network-focused internships and co-op roles.",
   metadataBase: process.env.NEXT_PUBLIC_SITE_URL ? new URL(process.env.NEXT_PUBLIC_SITE_URL) : undefined,
   openGraph: {
-    title: "Moosa Alam — CS · Security Engineering",
+    title: "Moosa Alam — CS · Network Engineering",
     description:
-      "Computer Science student at University of Guelph. Aspiring Security Engineer focused on secure, reliable systems.",
+      "Computer Science student at University of Guelph. Aspiring Network Engineer focused on reliable infrastructure and connectivity.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Moosa Alam",
     description:
-      "Computer Science @ Guelph. Aspiring Security Engineer. Open to security-focused roles.",
+      "Computer Science @ Guelph. Aspiring Network Engineer. Open to network-focused roles.",
   },
   robots: "index, follow",
 };

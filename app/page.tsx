@@ -52,12 +52,12 @@ function useTypewriter(text: string, startAfterMs = 400) {
 }
 
 const TECH_ROW_1 = [
-  "Python", "JavaScript", "TypeScript", "React", "Next.js", "Node.js",
-  "AWS", "Git", "Linux", "Tailwind", "Framer Motion", "HTML", "CSS",
+  "Python", "Linux", "TCP/IP", "DNS", "Docker", "Git", "Flask",
+  "AWS", "Terraform", "Bash", "C", "GitHub Actions", "PostgreSQL",
 ];
 const TECH_ROW_2 = [
-  "Terraform", "Cybersecurity", "IAM", "REST APIs", "CI/CD", "Vercel", "PostgreSQL",
-  "MongoDB", "Docker", "Figma", "VS Code",
+  "Networking", "VPN", "Routing", "CI/CD", "REST APIs", "VLANs", "Wireshark",
+  "Virtualization", "Observability", "BSD Sockets", "VS Code",
 ];
 
 const container = {
@@ -184,7 +184,7 @@ export default function Home() {
               variants={item}
               className="mt-6 text-white/60 text-lg sm:text-xl font-medium"
             >
-              Computer Science @ Guelph · Aspiring Security Engineer
+              Computer Science @ Guelph · Aspiring Network Engineer
             </motion.p>
             <motion.div
               variants={item}
@@ -332,10 +332,10 @@ export default function Home() {
                     transition={{ delay: 0.1, duration: 0.4 }}
                     className="text-white/85 text-lg leading-relaxed space-y-4"
                   >
-                    <p>I’m a Computer Science student at the University of Guelph with a clear goal: become a Security Engineer who builds systems that are secure by default.</p>
-                    <p>I learn fastest by shipping, from freelance client work to backend, infrastructure, and security projects where I can test ideas in real environments.</p>
-                    <p>Right now I am focused on agent runtime security, cloud IAM hardening, and threat detection while working toward AWS Cloud Practitioner and CCNA.</p>
-                    <p>I am currently seeking security-focused internships and co-op opportunities where I can contribute to real-world security engineering work.</p>
+                    <p>I’m a Computer Science student at the University of Guelph with a clear goal: become a Network Engineer who designs, builds, and operates reliable connected systems.</p>
+                    <p>I learn fastest by building — from production software internships to hands-on labs where I can experiment with routing, tunneling, and virtualized network topologies.</p>
+                    <p>Right now I’m focused on networking fundamentals, infrastructure automation, and observability while working toward CCNA and AWS Cloud Practitioner.</p>
+                    <p>I’m currently seeking network-focused internships and co-op opportunities where I can contribute to real-world infrastructure and connectivity work.</p>
                   </motion.div>
                 </div>
 
@@ -357,25 +357,14 @@ export default function Home() {
                   {(
                     [
                       {
-                        name: "Agent Seatbelt",
-                        desc: "TypeScript, CLI, policy engine · Runtime firewall for AI coding agents — blocks risky shell, secret, and production actions with approvals, receipts, and audit trails.",
-                        href: "https://github.com/kenjiifx/Agent-Seatbelt",
+                        name: "User-Space VPN Tunnel",
+                        desc: "C, Linux, Networking · User-space VPN tunnel exploring encrypted packet forwarding, tunnel interfaces, and connectivity between virtual network endpoints.",
+                        href: "https://github.com/kenjiifx/User-Space-VPN-Tunnel",
                       },
                       {
-                        name: "Permission Guard",
-                        desc: "TypeScript, AWS IAM, SARIF · Local-first CLI that scans IAM policies for overly broad permissions, scores risk, and suggests safer reviewable remediations.",
-                        href: "https://github.com/kenjiifx/Permission-Guard",
-                        demo: "https://permission-guard-cli.vercel.app",
-                      },
-                      {
-                        name: "SSH Honeypot & Threat Analytics",
-                        desc: "AWS, Docker, ELK, Python, Terraform · Cloud honeypot capturing real attack traffic; 5,000+ events analyzed with least-privilege IAM and secure provisioning.",
-                        href: "https://github.com/kenjiifx/Distributed-SSH-Threat-Monitor",
-                      },
-                      {
-                        name: "More on GitHub",
-                        desc: "Security tooling, cloud experiments, and side projects across systems and automation.",
-                        href: GITHUB_BASE,
+                        name: "Virtualized Network Home Lab",
+                        desc: "Virtualization, Linux · Home lab for designing and testing multi-segment network topologies, routing, and service connectivity in isolated environments.",
+                        href: "https://github.com/kenjiifx/Virtualized-Network-Home-Lab",
                       },
                     ] as {
                       name: string;
@@ -451,16 +440,16 @@ export default function Home() {
                 <div className="absolute left-[5px] top-2 bottom-2 w-px bg-white/10" />
                 {[
                     {
+                      role: "Software Development Intern",
+                      org: "PixelsBoost Website Design",
+                      period: "Apr 2026 – Aug 2026 · Milton, ON",
+                      desc: "Built and deployed full-stack client apps serving 1,000+ users from requirements through launch; integrated Stripe processing $10,000+ in transactions; improved performance 32% via caching, resource tuning, and reduced network/rendering overhead.",
+                    },
+                    {
                       role: "Software Engineering Intern",
                       org: "Vibez Music",
                       period: "Jan 2026 – Apr 2026 · Toronto, ON",
-                      desc: "Improved internal throughput by 40%+ with Python backend services and automation; tightened observability with validation, structured logging, and standardized errors; owned CI/CD-backed deployments for cross-functional teams.",
-                    },
-                    {
-                      role: "Freelance Web Developer",
-                      org: "Self-Employed",
-                      period: "Jun 2024 – Present · Remote",
-                      desc: "Delivered 4+ production-grade web systems end-to-end (design through deployment); tuned performance for 95–100 Lighthouse scores via caching, assets, and efficient loading.",
+                      desc: "Improved internal workflow throughput by 40%+ with Python and Flask automation; strengthened reliability via structured logging, request validation, and traceable error handling; automated testing and deployment with GitHub Actions CI/CD.",
                     },
                     {
                       role: "Academic Tutor & Mentor",
@@ -515,12 +504,12 @@ export default function Home() {
                   <p className="text-white/80 mt-3 font-medium">
                     Bachelor of Computing (Co-op) · Computer Science
                   </p>
-                  <p className="text-white/55 text-sm mt-1">Area of emphasis: Cybersecurity</p>
+                  <p className="text-white/55 text-sm mt-1">Area of emphasis: Cybersecurity · networking & systems</p>
                   <ul className="mt-5 space-y-2.5">
                     {[
                       "Co-op stream: alternating study terms with industry placements.",
-                      "Core focus: distributed systems, security, and cloud-native tools.",
-                      "Building a strong foundation in algorithms, networks, and software engineering.",
+                      "Core focus: computer networks, distributed systems, and infrastructure.",
+                      "Building a strong foundation in algorithms, routing, and software engineering.",
                     ].map((bullet, i) => (
                       <motion.li
                         key={i}
@@ -666,7 +655,7 @@ export default function Home() {
           transition={{ delay: 0.7 }}
           className="mt-16 text-center text-white/30 text-xs tracking-wide space-y-2"
         >
-          <p>Last updated July 2026</p>
+          <p>Last updated August 2026</p>
           <p>
             <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(EMAIL)}`} target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white/80 underline decoration-white/30 hover:decoration-white/50 transition-colors">Get in touch</a>
             {" · "}
