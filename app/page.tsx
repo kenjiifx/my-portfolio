@@ -192,7 +192,7 @@ export default function Home() {
               variants={item}
               className="mt-6 text-white/60 text-lg sm:text-xl font-medium"
             >
-              Computer Science @ Guelph · Systems / Cloud Infrastructure / Security
+              Computer Science @ Guelph · Systems · Cloud · Security
             </motion.p>
             <motion.div
               variants={item}
@@ -338,10 +338,8 @@ export default function Home() {
                     transition={{ delay: 0.1, duration: 0.4 }}
                     className="text-white/85 text-lg leading-relaxed space-y-4"
                   >
-                    <p>I’m a Computer Science student at the University of Guelph building toward Systems / Cloud Infrastructure / Security engineering — someone who can talk operating systems, networking, distributed systems, Linux, automation, and security, and who has built things that prove it.</p>
-                    <p>The arc is deliberate: architecture and systems foundations, then networking labs, then cloud infrastructure and security/reliability problems — with research and real production work along the way.</p>
-                    <p>Right now I’m deepening Linux and networking fundamentals while working toward AWS Cloud Practitioner and CCNA, and shipping infrastructure projects I can defend end to end.</p>
-                    <p>I’m seeking infra, cloud, and networking co-op roles (then SRE / platform / security engineering) where I can contribute to real systems — not just pass interviews.</p>
+                    <p>Computer Science student at the University of Guelph focused on systems, cloud infrastructure, and security.</p>
+                    <p>Right now I’m building networking and Linux depth through hands-on labs, studying for AWS Cloud Practitioner and CCNA, and looking for infra, cloud, and networking co-op roles.</p>
                   </motion.div>
                 </div>
 
@@ -510,12 +508,12 @@ export default function Home() {
                   <p className="text-white/80 mt-3 font-medium">
                     Bachelor of Computing (Co-op) · Computer Science
                   </p>
-                  <p className="text-white/55 text-sm mt-1">Area of emphasis: Cybersecurity · systems, networking &amp; cloud</p>
+                  <p className="text-white/55 text-sm mt-1">Area of emphasis: Cybersecurity</p>
                   <ul className="mt-5 space-y-2.5">
                     {[
-                      "Accelerating toward Dec 2028 while keeping research and strong upper-year systems depth.",
-                      "Core focus: Linux, networks, systems programming, databases, cloud, and security.",
-                      "Building evidence — projects, co-op, and eventually undergraduate research — not just a transcript.",
+                      "Coursework spanning systems, networking, databases, cloud, and security.",
+                      "Co-op stream with industry placements alongside technical projects.",
+                      "Planning undergraduate research in systems, cloud, or security topics.",
                     ].map((bullet, i) => (
                       <motion.li
                         key={i}
@@ -545,12 +543,12 @@ export default function Home() {
                 {[
                   {
                     title: "AWS Certified Cloud Practitioner",
-                    meta: "Expected Sep 2026 · Amazon Web Services",
+                    meta: "In progress · Amazon Web Services",
                     done: false,
                   },
                   {
                     title: "CCNA",
-                    meta: "Expected Dec 2026 · Cisco",
+                    meta: "In progress · Cisco",
                     done: false,
                   },
                 ].map((cert, i) => (
@@ -585,35 +583,34 @@ export default function Home() {
                 className="relative max-w-2xl"
               >
                 <p className="text-white/60 text-sm mb-8 leading-relaxed">
-                  Destination: Systems / Cloud Infrastructure / Security Engineer — with real
-                  engineering depth, research, and an elite graduate path after the bachelor&apos;s.
+                  A technical roadmap toward systems, cloud infrastructure, and security engineering.
                 </p>
                 <div className="absolute left-[5px] top-16 bottom-2 w-px bg-white/10" />
                 {[
                   {
-                    when: "F26 — Now",
-                    title: "Infrastructure foundation",
-                    desc: "Systems foundations, CCNA/AWS Cloud Practitioner prep, and shipping infrastructure labs I can defend end to end.",
+                    when: "Now",
+                    title: "Foundation",
+                    desc: "Systems and networking fundamentals, infrastructure labs, and AWS Cloud Practitioner / CCNA preparation.",
                   },
                   {
-                    when: "W27",
-                    title: "First co-op",
-                    desc: "Infra / cloud / networking work term — solve real problems, automate something painful, earn a strong reference.",
+                    when: "Next",
+                    title: "Industry experience",
+                    desc: "Co-op in infrastructure, cloud, or networking — applying Linux, networking, and automation in production environments.",
                   },
                   {
-                    when: "2027",
-                    title: "Systems depth + research entry",
-                    desc: "Networking, databases, and systems programming — then start reading and approaching faculty for research.",
+                    when: "Then",
+                    title: "Systems depth",
+                    desc: "Stronger coursework in networking, databases, and systems programming, with continued personal infrastructure projects.",
                   },
                   {
-                    when: "2028",
-                    title: "Cloud, security & thesis",
-                    desc: "Cloud/security coursework plus undergraduate research/thesis — graduate December 2028.",
+                    when: "Later",
+                    title: "Cloud, security & research",
+                    desc: "Cloud and security focus alongside planned undergraduate research in systems or infrastructure security.",
                   },
                   {
-                    when: "2029+",
-                    title: "Full-time + elite MSc",
-                    desc: "Serious systems/infra engineering experience, then a high-prestige MSc/MPhil abroad — Systems / Cloud / Security lane.",
+                    when: "Longer term",
+                    title: "Advanced systems engineering",
+                    desc: "Deeper roles in systems, cloud, or security engineering, with graduate study as a possible next step.",
                   },
                 ].map((step, i) => (
                   <motion.div
