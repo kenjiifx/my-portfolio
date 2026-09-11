@@ -10,7 +10,6 @@ from reportlab.platypus import (
     SimpleDocTemplate,
     Spacer,
     Table,
-    TableStyle,
 )
 
 OUT = Path(__file__).resolve().parents[1] / "public" / "Moosa_Alam_Resume_2026.pdf"
@@ -115,8 +114,8 @@ def build():
     story.append(Paragraph("Moosa Alam", s["name"]))
     story.append(
         Paragraph(
-            "437-212-7641 · malam20@uoguelph.ca · linkedin.com/in/moosa-alam · "
-            "github.com/kenjiifx · moosaalam.vercel.app",
+            "437-212-7641 | malam20@uoguelph.ca | linkedin.com/in/moosa-alam | "
+            "github.com/kenjiifx",
             s["contact"],
         )
     )
@@ -132,7 +131,7 @@ def build():
     )
     story.append(
         Paragraph(
-            "Specialization in Cybersecurity · 2025 – 2030",
+            "Area of Emphasis: Cybersecurity · Expected Dec 2028",
             s["meta"],
         )
     )
@@ -142,16 +141,14 @@ def build():
     story.append(hr())
     skills = [
         (
-            "<b>Languages:</b> TypeScript, Python, C, JavaScript, Java, SQL, Bash"
+            "<b>Networking:</b> TCP/IP, IPv4/IPv6, Ethernet, Subnetting, VLANs, "
+            "Routing &amp; Switching, DNS, DHCP, NAT, ACLs, VPNs, SSH"
         ),
         (
-            "<b>Systems &amp; Infra:</b> Linux, Docker, GitHub Actions CI/CD, "
-            "AWS (EC2, S3, IAM), Terraform, pthreads, BSD sockets"
+            "<b>Systems &amp; Tools:</b> Windows 10/11, Linux, PC Hardware, "
+            "Workstation Setup, System Troubleshooting, Wireshark, tcpdump"
         ),
-        (
-            "<b>Security &amp; Observability:</b> IAM policy analysis, SARIF, "
-            "Prometheus/Grafana, ELK (Logstash/Kibana), PostgreSQL, FastAPI/Flask, pytest"
-        ),
+        "<b>Programming:</b> Python, Bash, C, Git",
     ]
     for line in skills:
         story.append(Paragraph(line, s["body"]))
@@ -160,34 +157,34 @@ def build():
     story.append(Paragraph("Experience", s["section"]))
     story.append(hr())
 
-    story.append(row("Software Engineering Intern — Vibez Music", "Toronto, ON", s))
-    story.append(Paragraph("Jan 2026 – Apr 2026", s["meta"]))
+    story.append(row("Software Development Intern — PixelsBoost Website Design", "Milton, ON", s))
+    story.append(Paragraph("Apr 2026 – Aug 2026", s["meta"]))
     story.extend(
         bullets(
             [
-                "Improved internal system throughput by 40%+ by designing and deploying "
-                "Python-based backend services and automation tooling to eliminate manual "
-                "operational bottlenecks.",
-                "Reduced incident triage time by implementing strict request validation, "
-                "structured JSON logging, and standardized error handling, improving "
-                "observability and debugging efficiency.",
-                "Owned backend delivery pipelines by integrating CI/CD workflows and "
-                "maintaining reliable service deployments used by cross-functional teams.",
+                "Built and deployed full-stack client applications serving 1,000+ users, "
+                "supporting reliable production systems from requirements through launch.",
+                "Integrated secure Stripe payment infrastructure processing over $10,000 "
+                "in transactions while maintaining reliable application workflows.",
+                "Diagnosed and improved application performance by 32% through caching, "
+                "resource optimization, and reduction of network and rendering overhead.",
             ],
             s,
         )
     )
     story.append(Spacer(1, 5))
 
-    story.append(row("Freelance Web Developer — Self-Employed", "Remote", s))
-    story.append(Paragraph("Jun 2024 – Present", s["meta"]))
+    story.append(row("Software Engineering Intern — Vibez Music", "Toronto, ON", s))
+    story.append(Paragraph("Jan 2026 – Apr 2026", s["meta"]))
     story.extend(
         bullets(
             [
-                "Delivered 4+ production-grade web systems end-to-end, handling system "
-                "design, performance optimization, and deployment.",
-                "Optimized frontend and backend performance to achieve 95-100 Lighthouse "
-                "scores through asset tuning, caching strategies, and efficient resource loading.",
+                "Improved internal workflow throughput by 40%+ by developing Python and "
+                "Flask tools that automated repetitive operational processes.",
+                "Improved system reliability and troubleshooting through structured "
+                "logging, request validation, error handling, and traceable service responses.",
+                "Automated testing and deployment with GitHub Actions CI/CD while "
+                "diagnosing and resolving integration and production issues.",
             ],
             s,
         )
@@ -198,18 +195,20 @@ def build():
 
     story.append(
         row(
-            "Agent Seatbelt | TypeScript, CLI, Policy Engine",
-            "Apr 2026 – Present",
+            "Virtualized Network Home Lab | Linux, Docker, GitHub Actions, Wireshark",
+            "",
             s,
         )
     )
     story.extend(
         bullets(
             [
-                "Built a runtime firewall for AI coding agents that intercepts shell, "
-                "repo, secret, and production-bound actions before execution.",
-                "Implemented deterministic risk classification, approval gating, session "
-                "receipts, and hash-chained audit trails for local DevSecOps workflows.",
+                "Built a segmented multi-host Linux network lab using isolated subnets, "
+                "configuring IPv4 addressing, routing, DNS, DHCP, NAT, SSH, and firewall rules.",
+                "Deployed containerized services through GitHub Actions CI/CD and validated "
+                "connectivity using ping, traceroute, and application-level network tests.",
+                "Captured and analyzed traffic with Wireshark and tcpdump to troubleshoot "
+                "DNS resolution, TCP connections, routing behavior, and packet flow.",
             ],
             s,
         )
@@ -218,40 +217,20 @@ def build():
 
     story.append(
         row(
-            "Permission Guard | TypeScript, AWS IAM, SARIF",
-            "Apr 2026",
+            "User-Space VPN Tunnel | Python, Linux, TUN/TAP, UDP, Wireshark",
+            "",
             s,
         )
     )
     story.extend(
         bullets(
             [
-                "Shipped a local-first CLI (npm: @kenjiifx/permissionguard) that scans "
-                "AWS IAM policies for overly broad permissions and scores risk.",
-                "Generated safer, reviewable remediation candidates and SARIF findings "
-                "suitable for CI and code scanning pipelines.",
-            ],
-            s,
-        )
-    )
-    story.append(Spacer(1, 4))
-
-    story.append(
-        row(
-            "SSH Honeypot &amp; Threat Analytics | AWS, Docker, ELK, Python, Terraform",
-            "Dec 2025 – Jan 2026",
-            s,
-        )
-    )
-    story.extend(
-        bullets(
-            [
-                "Deployed a cloud-based SSH honeypot on AWS to capture and analyze "
-                "real-world attack traffic in a controlled environment.",
-                "Processed and analyzed 5,000+ attack events using Python and the ELK "
-                "stack to identify attacker behaviors and command execution trends.",
-                "Provisioned infrastructure with Terraform, enforcing least-privilege "
-                "IAM policies and secure cloud deployment practices.",
+                "Built a point-to-point VPN using Linux TUN interfaces and UDP sockets to "
+                "encapsulate and route IP packets between isolated network endpoints.",
+                "Configured IP forwarding, routing tables, NAT, firewall rules, and "
+                "authenticated encryption to securely transport network traffic through the tunnel.",
+                "Analyzed packet flow with Wireshark and tcpdump to diagnose connectivity, "
+                "latency, routing, and packet-loss issues across the tunnel.",
             ],
             s,
         )
@@ -261,14 +240,14 @@ def build():
     story.append(hr())
     story.append(
         Paragraph(
-            "<b>AWS Certified Cloud Practitioner</b> — In Progress · Amazon Web Services",
+            "<b>AWS Certified Cloud Practitioner</b> — Expected Sep 2026 · Amazon Web Services",
             s["body"],
         )
     )
     story.append(Spacer(1, 2))
     story.append(
         Paragraph(
-            "<b>CCNA</b> — In Progress · Cisco",
+            "<b>Cisco Certified Network Associate (CCNA)</b> — Expected Dec 2026 · Cisco",
             s["body"],
         )
     )

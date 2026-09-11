@@ -8,7 +8,15 @@ const GITHUB_BASE = "https://github.com/kenjiifx";
 const LINKEDIN_URL = "https://www.linkedin.com/in/moosa-alam";
 const EMAIL = "moosahameed07@gmail.com";
 
-type SectionKey = "about" | "experience" | "education" | "certifications";
+type SectionKey = "about" | "experience" | "education" | "certifications" | "path";
+
+const SECTION_KEYS: SectionKey[] = [
+  "about",
+  "experience",
+  "education",
+  "certifications",
+  "path",
+];
 
 const FULL_NAME = "Moosa Alam";
 const TYPING_SPEED_MS = 90;
@@ -52,12 +60,12 @@ function useTypewriter(text: string, startAfterMs = 400) {
 }
 
 const TECH_ROW_1 = [
-  "Python", "Linux", "TCP/IP", "DNS", "Docker", "Git", "Flask",
-  "AWS", "Terraform", "Bash", "C", "GitHub Actions", "PostgreSQL",
+  "Python", "Linux", "TCP/IP", "Subnetting", "VLANs", "DNS", "DHCP", "NAT",
+  "Docker", "Git", "Bash", "C", "AWS", "GitHub Actions",
 ];
 const TECH_ROW_2 = [
-  "Networking", "VPN", "Routing", "CI/CD", "REST APIs", "VLANs", "Wireshark",
-  "Virtualization", "Observability", "BSD Sockets", "VS Code",
+  "Routing", "Switching", "ACLs", "VPN", "SSH", "Wireshark", "tcpdump",
+  "Virtualization", "CI/CD", "Networking", "Systems", "Cloud", "Security",
 ];
 
 const container = {
@@ -113,18 +121,18 @@ export default function Home() {
     return () => window.removeEventListener("mousemove", onMove);
   }, []);
 
-  const sectionKeys: SectionKey[] = ["about", "experience", "education", "certifications"];
   useEffect(() => {
+    const n = SECTION_KEYS.length;
     const onKeyDown = (e: KeyboardEvent) => {
-      const i = sectionKeys.indexOf(active);
+      const i = SECTION_KEYS.indexOf(active);
       if (e.key === "ArrowRight" || e.key === "ArrowDown") {
         e.preventDefault();
-        setActive(sectionKeys[(i + 1) % 4]);
+        setActive(SECTION_KEYS[(i + 1) % n]);
       } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
         e.preventDefault();
-        setActive(sectionKeys[(i + 3) % 4]);
-      } else if (e.key >= "1" && e.key <= "4") {
-        setActive(sectionKeys[Number(e.key) - 1]);
+        setActive(SECTION_KEYS[(i + n - 1) % n]);
+      } else if (e.key >= "1" && e.key <= String(n)) {
+        setActive(SECTION_KEYS[Number(e.key) - 1]);
       }
     };
     window.addEventListener("keydown", onKeyDown);
@@ -184,7 +192,7 @@ export default function Home() {
               variants={item}
               className="mt-6 text-white/60 text-lg sm:text-xl font-medium"
             >
-              Computer Science @ Guelph · Aspiring Network Engineer
+              Computer Science @ Guelph · Systems / Cloud Infrastructure / Security
             </motion.p>
             <motion.div
               variants={item}
@@ -282,8 +290,7 @@ export default function Home() {
           transition={{ delay: 0.35, duration: 0.5 }}
           className="flex flex-wrap justify-center gap-6 sm:gap-8 mb-12 border-b border-white/10 pb-1"
         >
-          {(["about", "experience", "education", "certifications"] as SectionKey[]).map(
-            (tab) => (
+          {SECTION_KEYS.map((tab) => (
               <motion.button
                 key={tab}
                 onClick={() => setActive(tab)}
@@ -303,8 +310,7 @@ export default function Home() {
                   />
                 )}
               </motion.button>
-            )
-          )}
+          ))}
         </motion.nav>
 
         {/* Content */}
@@ -332,10 +338,10 @@ export default function Home() {
                     transition={{ delay: 0.1, duration: 0.4 }}
                     className="text-white/85 text-lg leading-relaxed space-y-4"
                   >
-                    <p>I’m a Computer Science student at the University of Guelph with a clear goal: become a Network Engineer who designs, builds, and operates reliable connected systems.</p>
-                    <p>I learn fastest by building — from production software internships to hands-on labs where I can experiment with routing, tunneling, and virtualized network topologies.</p>
-                    <p>Right now I’m focused on networking fundamentals, infrastructure automation, and observability while working toward CCNA and AWS Cloud Practitioner.</p>
-                    <p>I’m currently seeking network-focused internships and co-op opportunities where I can contribute to real-world infrastructure and connectivity work.</p>
+                    <p>I’m a Computer Science student at the University of Guelph building toward Systems / Cloud Infrastructure / Security engineering — someone who can talk operating systems, networking, distributed systems, Linux, automation, and security, and who has built things that prove it.</p>
+                    <p>The arc is deliberate: architecture and systems foundations, then networking labs, then cloud infrastructure and security/reliability problems — with research and real production work along the way.</p>
+                    <p>Right now I’m deepening Linux and networking fundamentals while working toward AWS Cloud Practitioner and CCNA, and shipping infrastructure projects I can defend end to end.</p>
+                    <p>I’m seeking infra, cloud, and networking co-op roles (then SRE / platform / security engineering) where I can contribute to real systems — not just pass interviews.</p>
                   </motion.div>
                 </div>
 
@@ -357,14 +363,14 @@ export default function Home() {
                   {(
                     [
                       {
-                        name: "User-Space VPN Tunnel",
-                        desc: "C, Linux, Networking · User-space VPN tunnel exploring encrypted packet forwarding, tunnel interfaces, and connectivity between virtual network endpoints.",
-                        href: "https://github.com/kenjiifx/User-Space-VPN-Tunnel",
+                        name: "Virtualized Network Home Lab",
+                        desc: "Linux, Docker, GitHub Actions, Wireshark · Segmented multi-host lab with isolated subnets, IPv4 routing, DNS, DHCP, NAT, SSH, and firewall rules — validated with ping, traceroute, and packet analysis.",
+                        href: "https://github.com/kenjiifx/Virtualized-Network-Home-Lab",
                       },
                       {
-                        name: "Virtualized Network Home Lab",
-                        desc: "Virtualization, Linux · Home lab for designing and testing multi-segment network topologies, routing, and service connectivity in isolated environments.",
-                        href: "https://github.com/kenjiifx/Virtualized-Network-Home-Lab",
+                        name: "User-Space VPN Tunnel",
+                        desc: "Python, Linux, TUN/TAP, UDP, Wireshark · Point-to-point VPN that encapsulates and routes IP packets between isolated endpoints with forwarding, NAT, firewall rules, and authenticated encryption.",
+                        href: "https://github.com/kenjiifx/User-Space-VPN-Tunnel",
                       },
                     ] as {
                       name: string;
@@ -500,16 +506,16 @@ export default function Home() {
                   <h3 className="font-display font-semibold text-white text-xl">
                     University of Guelph
                   </h3>
-                  <p className="text-white/50 text-sm mt-1">2025 – 2030</p>
+                  <p className="text-white/50 text-sm mt-1">Expected Dec 2028</p>
                   <p className="text-white/80 mt-3 font-medium">
                     Bachelor of Computing (Co-op) · Computer Science
                   </p>
-                  <p className="text-white/55 text-sm mt-1">Area of emphasis: Cybersecurity · networking & systems</p>
+                  <p className="text-white/55 text-sm mt-1">Area of emphasis: Cybersecurity · systems, networking &amp; cloud</p>
                   <ul className="mt-5 space-y-2.5">
                     {[
-                      "Co-op stream: alternating study terms with industry placements.",
-                      "Core focus: computer networks, distributed systems, and infrastructure.",
-                      "Building a strong foundation in algorithms, routing, and software engineering.",
+                      "Accelerating toward Dec 2028 while keeping research and strong upper-year systems depth.",
+                      "Core focus: Linux, networks, systems programming, databases, cloud, and security.",
+                      "Building evidence — projects, co-op, and eventually undergraduate research — not just a transcript.",
                     ].map((bullet, i) => (
                       <motion.li
                         key={i}
@@ -539,12 +545,12 @@ export default function Home() {
                 {[
                   {
                     title: "AWS Certified Cloud Practitioner",
-                    meta: "In progress · Amazon Web Services",
+                    meta: "Expected Sep 2026 · Amazon Web Services",
                     done: false,
                   },
                   {
                     title: "CCNA",
-                    meta: "In progress · Cisco",
+                    meta: "Expected Dec 2026 · Cisco",
                     done: false,
                   },
                 ].map((cert, i) => (
@@ -564,6 +570,65 @@ export default function Home() {
                       {cert.title}
                     </h3>
                     <p className="text-white/50 text-sm mt-2">{cert.meta}</p>
+                  </motion.div>
+                ))}
+              </motion.div>
+            )}
+
+            {active === "path" && (
+              <motion.div
+                key="path"
+                initial={{ opacity: 0, y: 20, scale: 0.96 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -12, scale: 0.98 }}
+                transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+                className="relative max-w-2xl"
+              >
+                <p className="text-white/60 text-sm mb-8 leading-relaxed">
+                  Destination: Systems / Cloud Infrastructure / Security Engineer — with real
+                  engineering depth, research, and an elite graduate path after the bachelor&apos;s.
+                </p>
+                <div className="absolute left-[5px] top-16 bottom-2 w-px bg-white/10" />
+                {[
+                  {
+                    when: "F26 — Now",
+                    title: "Infrastructure foundation",
+                    desc: "Systems foundations, CCNA/AWS Cloud Practitioner prep, and shipping infrastructure labs I can defend end to end.",
+                  },
+                  {
+                    when: "W27",
+                    title: "First co-op",
+                    desc: "Infra / cloud / networking work term — solve real problems, automate something painful, earn a strong reference.",
+                  },
+                  {
+                    when: "2027",
+                    title: "Systems depth + research entry",
+                    desc: "Networking, databases, and systems programming — then start reading and approaching faculty for research.",
+                  },
+                  {
+                    when: "2028",
+                    title: "Cloud, security & thesis",
+                    desc: "Cloud/security coursework plus undergraduate research/thesis — graduate December 2028.",
+                  },
+                  {
+                    when: "2029+",
+                    title: "Full-time + elite MSc",
+                    desc: "Serious systems/infra engineering experience, then a high-prestige MSc/MPhil abroad — Systems / Cloud / Security lane.",
+                  },
+                ].map((step, i) => (
+                  <motion.div
+                    key={step.when}
+                    initial={{ opacity: 0, x: -12 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.1, duration: 0.4 }}
+                    className="relative pl-8 pb-10 last:pb-0 group/job"
+                  >
+                    <div className="absolute left-0 top-1.5 w-2.5 h-2.5 rounded-full bg-white/80 border-2 border-[#0a0a0a] group-hover/job:bg-white group-hover/job:scale-125 transition-transform duration-300" />
+                    <p className="text-white/45 text-sm">{step.when}</p>
+                    <h3 className="font-display font-semibold text-white text-lg mt-0.5">
+                      {step.title}
+                    </h3>
+                    <p className="text-white/70 text-sm mt-2 leading-relaxed">{step.desc}</p>
                   </motion.div>
                 ))}
               </motion.div>
@@ -655,13 +720,13 @@ export default function Home() {
           transition={{ delay: 0.7 }}
           className="mt-16 text-center text-white/30 text-xs tracking-wide space-y-2"
         >
-          <p>Last updated August 2026</p>
+          <p>Last updated September 2026</p>
           <p>
             <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(EMAIL)}`} target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white/80 underline decoration-white/30 hover:decoration-white/50 transition-colors">Get in touch</a>
             {" · "}
             <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white/80 underline decoration-white/30 hover:decoration-white/50 transition-colors">LinkedIn</a>
           </p>
-          <p className="text-white/20">← → or 1–4 to switch sections</p>
+          <p className="text-white/20">← → or 1–5 to switch sections</p>
         </motion.footer>
       </div>
     </main>
